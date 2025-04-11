@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				editor: {
+					bg: '#1e1e1e',
+					line: '#2d2d2d',
+					text: '#d4d4d4',
+					comment: '#6a9955',
+					keyword: '#569cd6',
+					string: '#ce9178',
+					function: '#dcdcaa',
+					number: '#b5cea8',
+					type: '#4ec9b0',
+				},
+				ai: {
+					blue: '#61dafb',
+					purple: '#8b5cf6',
+				},
+			},
+			fontFamily: {
+				mono: ['JetBrains Mono', 'monospace'],
+				sans: ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +104,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-blue': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
+				},
+				'typing': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' },
+				},
+				'blink': {
+					'0%, 100%': { borderColor: 'transparent' },
+					'50%': { borderColor: 'hsl(var(--primary))' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-blue': 'pulse-blue 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'typing': 'typing 3.5s steps(40, end)',
+				'blink': 'blink 1s step-end infinite',
 			}
 		}
 	},
